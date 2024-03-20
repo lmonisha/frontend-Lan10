@@ -1,0 +1,55 @@
+.main-section form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    /* background: #fff; */
+    gap: 30px;
+}
+
+.formInner {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 8px 0px #757575;
+    flex: 1 1 300px;
+}
+
+.formInput label {
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+
+.formInner select {
+    height: 32px;
+    border-radius: 5px;
+    width: 100%;
+    border: unset;
+    box-shadow: 2px 2px 6px #7575757a;
+}
+
+.formInput input {
+    height: 32px;
+    width: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border: unset;
+    box-shadow: 2px 2px 6px #7575757a;
+}
+
+button {
+    padding: 8px 17px;
+    width: fit-content;
+    background: #3f51b5;
+    border: unset;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 20px;
+    display: block;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 20px;
+}

@@ -1,0 +1,44 @@
+<div class="">
+    <app-side-nav></app-side-nav>
+    <div class="main-section">
+        <div class="formInner">
+            <form [formGroup]="newempForm">
+                <div class="formInput">
+                   
+                    <label>Name</label>   
+                    <input type="text" formControlName="name" placeholder="">
+                </div>
+                <div class="formInput">
+                    <label>DOB</label>
+                    <input type="date" formControlName="dob" (change)="onDateChange($event)">
+
+
+                </div>
+                <div class="formInput">
+                    <label>Gender</label>
+                    <input type="text" formControlName="gender" placeholder="">
+                </div>
+                <div class="formInput">
+                    <label>Age</label>
+                    <input type="number" formControlName="age" placeholder="">
+                </div>
+        
+                <div class="formInput">
+                    <label>Mobile no</label>
+                    <input type="text" formControlName="mobileNo" placeholder="">
+                </div>
+                <div class="formInput">
+                    <label>email</label>
+                    <input type="text" formControlName="email" placeholder="">
+                </div>
+
+                
+                <button *ngIf="editMode==true" (click)="addUser()" style="background-color: blueviolet;">Update</button>
+
+                <button *ngIf="editMode==false" (click)="addUser()" style="background-color: blueviolet;">Submit</button>
+            </form>
+
+        </div>
+
+    </div>
+</div>

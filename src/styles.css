@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.main-section {
+    width: calc(100% - 200px);
+    position: relative;
+    left: 200px;
+}
+
+
+.formSection {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    /* gap: 20px; */
+}
+
+.formSection form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formInput {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.formInput label {
+    font-size: 18px;
+}
+
+.formInput input {
+    padding: 5px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.main-section {
+    padding: 20px;
+    box-sizing: border-box;
+}
+.table-responsive
+{
+    padding: 12px;
+}
+

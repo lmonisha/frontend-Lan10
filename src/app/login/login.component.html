@@ -1,0 +1,30 @@
+
+<!-- <input type="email" name="EmailId" placeholder="aaa@domain.com"><br><br>
+<input type="password" name="password"><br><br>
+<button (click)="login()">Submit</button> -->
+
+
+<div class="loginSection">
+    <!-- <ngx-toast-container></ngx-toast-container> -->
+
+<form [formGroup]="loginForm">
+    <h1>Login Page</h1>
+    <mat-form-field class="example-full-width">
+        <mat-label>
+            UserName
+        </mat-label>
+        <input type="text" matInput formControlName="username" placeholder="">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <mat-label>
+            Password
+        </mat-label>
+        <input type="password" matInput formControlName="password">
+    </mat-form-field>
+    <br>
+    <button mat-raised-button (click)="submit()">Submit</button>
+<button  mat-raised-button (click)="forgetPass()" style="float: right;"> ForgotPassword</button>
+
+</form>
+</div>

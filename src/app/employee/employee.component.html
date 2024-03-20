@@ -1,0 +1,72 @@
+<div class="">
+    <app-side-nav></app-side-nav>
+    <div class="main-section">
+        <div class="buttonSection">
+            <button (click)="addEmployee()">Add</button>
+
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th>S.NO</th>
+                        <th>Name</th>
+                        <th>Date Of Birth</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Mobile Number</th>
+                        <th>emailId</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let emp of employeeList; let i = index">
+                        <td>
+                            {{i+1}}
+                        </td>
+                        <!-- <td>
+                            {{emp.Username}}
+                        </td> -->
+                        <td>
+                            {{emp.staffId?.Name||''}}
+                        </td>
+
+
+                        <td>
+                            {{emp.staffId?.Date_Of_Birth| date:'dd-MM-yyyy'||''}}
+                        </td>
+
+                        <td>
+                            {{emp.staffId?.Age||''}}
+                        </td>
+
+                        <td>
+                            {{emp.staffId?.Gender||''}}
+                        </td>
+
+                        <td>
+                            {{emp.staffId?.Mobile_Number||''}}
+                        </td>
+
+                        <td>
+                            {{emp.staffId?.emailId||''}}
+                        </td>
+
+                        <td>
+                            <button mat-raised-button style="background-color:green" (click)="updateForm(emp)"> Edit</button>
+                        </td>
+                        <td>
+                            <button mat-raised-button style="background-color:red" (click)="deleteForm(emp)"> Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination-controls">
+            <button mat-raised-button (click)="prevPage()" style="background-color:green" [disabled]="currentPage === 1">Previous</button>
+            <span >{{ currentPage }}</span>
+            <button mat-raised-button style="background-color:green"(click)="nextPage()">Next</button>
+        </div>
+    </div>
+</div>
